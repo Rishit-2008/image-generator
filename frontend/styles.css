@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #0d1b2a;
+    color: #e5e5e5;
+}
+
+.container {
+    background: #1b2631;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #ffffff;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #2c3e50;
+    color: #fff;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #1E90FF;
+    outline: none;
+    background: #34495e;
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #1E90FF, #3742FA);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #3742FA, #1E90FF);
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(30, 144, 255, 0.5);
+}
+
+button:disabled {
+    background: #555;
+    cursor: not-allowed;
+}
+
+.loading {
+    text-align: center;
+    margin: 1rem 0;
+    font-style: italic;
+    color: green;
+    display: none;
+}
+
+.gallery {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.image-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+    border: 2px solid #007BFF;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.generated-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.generated-image:hover {
+    transform: scale(1.02);
+}
+
+.prompt-text {
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #aaa;
+    text-align: center;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.delete-btn:hover {
+    background: #8B0000;
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.error {
+    color: #FF4C4C;
+    margin-top: 1rem;
+    text-align: center;
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
