@@ -52,6 +52,6 @@ def keep_alive():
     print(health_response)
     print(f"Health check at: {health_response.json()['timestamp']}")
     
-    headers = {"X-API-KEY": "ak-QJrbfT0G2V2h3sfS627aRm"}
+    headers = {"X-API-KEY": "api_key"}
     generate_response = requests.get(generate_url, headers=headers)
     print(f"Generate endpoint tested successfully at: {datetime.now(timezone.utc).isoformat()}")
