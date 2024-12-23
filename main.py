@@ -25,7 +25,7 @@ class Model:
         import torch
         self.pipe = AutoPipelineForText2Image.from_pretrained("stabilityai/sdxl-turbo", torch_dtype=torch.float16, variant="fp16")
         self.pipe.to("cuda")
-        self.API_KEY = "ak-QJrbfT0G2V2h3sfS627aRm"
+        self.API_KEY = "api_key"
 
     @modal.web_endpoint()
     def generate(self, request: Request, prompt: str = Query(..., description="Prompt to generate image")):
@@ -45,8 +45,8 @@ class Model:
 
 @app.function(schedule=modal.Cron("*/3 * * * *"))
 def keep_alive():
-    health_url = "https://rishit-seth--image-gen-model-health.modal.run"
-    generate_url = "https://rishit-seth--image-gen-model-generate.modal.run"
+    health_url = "hearth_url"
+    generate_url = "generate_url"
     
     health_response = requests.get(health_url)
     print(health_response)
