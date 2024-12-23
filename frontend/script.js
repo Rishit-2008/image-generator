@@ -1,5 +1,5 @@
-const API_URL = 'https://rishit-seth--image-gen-model-generate.modal.run';
-const API_KEY = 'ak-QJrbfT0G2V2h3sfS627aRm';
+const API_URL = 'endpoint_url';
+const API_KEY = 'api_key';
 
 const promptInput = document.getElementById('prompt');
 const generateButton = document.getElementById('generate');
